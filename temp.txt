@@ -1,1 +1,0 @@
-`https://api.jikan.moe/v4/anime/${mal_id}/statistics`
