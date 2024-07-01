@@ -1,0 +1,49 @@
+.Anime {
+    display: flex; /* Make overall container a flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 2rem; /* Add some padding for spacing */
+  }
+  
+  .Anime > div:first-child { /* Style the first child element (title, image) */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center title and image horizontally */
+    gap: 1rem; /* Add some space between title and image */
+  }
+  
+  .Anime h1,
+  .Anime h2 { /* Style title and subtitle */
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Adjust font size as needed */
+  }
+  
+  .Anime img {
+    width: 100%; /* Make image fill the container width */
+    max-width: 500px; /* Set a maximum width for responsiveness */
+    object-fit: cover; /* Ensure image covers the space while maintaining aspect ratio */
+  }
+  
+  .Anime p { /* Style paragraphs */
+    margin: 0.5rem 0; /* Add some margin for spacing */
+  }
+  
+  .Anime a { /* Style links for streaming platforms */
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+    margin-right: 1rem; /* Add some space between links */
+  }
+  
+  .Anime a:hover { /* Style link hover effect */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  .Anime iframe { /* Style the video iframe */
+    width: 100%; /* Make iframe fill the container width */
+    max-width: 800px; /* Set a maximum width for responsiveness */
+    aspect-ratio: 16/9; /* Maintain aspect ratio for video */
+    margin: 2rem 0; /* Add some margin for spacing */
+  }
+  
+
+  
