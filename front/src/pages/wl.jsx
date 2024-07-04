@@ -3,7 +3,7 @@ import Card from "../components/card";
 import HCard from "../components/hcard";
 import axios from "axios";
 import { Tooltip } from "@mui/material";
-
+axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:5000';
 function Wl() {
   const [animelist, setAnimeList] = useState([]);
   const [info, setInfo] = useState([]);

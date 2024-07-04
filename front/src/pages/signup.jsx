@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:5000';
 function Signup() {
   const navigate= useNavigate()
   const [username, setUsername] = useState('');
@@ -20,7 +21,8 @@ function Signup() {
   };
 
   return (
-    <div className="login-container">
+    <div className='App'>
+      <div className="login-container">
       <h2 className="login-title">Sign Up</h2>
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
@@ -42,6 +44,8 @@ function Signup() {
         <button type="submit" className="login-button">Sign Up</button>
       </form>
     </div>
+    </div>
+    
   );
 }
 

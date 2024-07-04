@@ -55,8 +55,8 @@ function Anime() {
       <div className="small-cont">
           
           {recc.map(anime => (
-            <Tooltip key={anime.entry.mal_id} title={<HCard name={anime.entry.title} mal_id={anime.entry.mal_id} />} placement="bottom-end">
-              <a href={`/anime/${anime.entry.mal_id}`} className="tile">
+            <Tooltip key={anime.entry.mal_id} title-={<HCard name={anime.entry.title} mal_id={anime.entry.mal_id} />} placement="bottom-end">
+              <a href={`/anime/${anime.entry.mal_id}`} className="tile-small">
                 <Card name={anime.entry.title} img={anime.entry.images.jpg.image_url} mal_id={anime.entry.mal_id} />
               </a>
             </Tooltip>
