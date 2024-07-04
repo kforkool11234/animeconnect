@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-axios.defaults.baseURL = process.env.NODE_ENV ||'http://localhost:5000';
+axios.defaults.baseURL = process.env.Base_Url||'http://localhost:5000';
 function Signup() {
   const navigate= useNavigate()
   const [username, setUsername] = useState('');
