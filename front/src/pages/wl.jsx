@@ -51,7 +51,7 @@ function Wl() {
     console.log(info)
     return (
       <div className='container'>
-        {info.map(anime => (<a  className='tile'><Tooltip title={<HCard name={anime.data.title_english} mal_id={anime.data.mal_id} />} placement='bottom-end'>
+        {info.map(anime => (<a  href={`/anime/${anime.data.mal_id}`} className='tile' ><Tooltip title={<HCard name={anime.data.title_english} mal_id={anime.data.mal_id} />} placement='bottom-end'>
         <Card name={anime.data.title_english} img={anime.data.images.jpg.image_url} mal_id={anime.data.mal_id}/> </Tooltip></a>
           
           

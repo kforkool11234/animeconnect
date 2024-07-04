@@ -1,49 +1,86 @@
-.Anime {
-    display: flex; /* Make overall container a flexbox for layout */
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center content horizontally */
-    padding: 2rem; /* Add some padding for spacing */
-  }
-  
-  .Anime > div:first-child { /* Style the first child element (title, image) */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center title and image horizontally */
-    gap: 1rem; /* Add some space between title and image */
-  }
-  
-  .Anime h1,
-  .Anime h2 { /* Style title and subtitle */
-    margin: 0; /* Remove default margin */
-    font-size: 1.5rem; /* Adjust font size as needed */
-  }
-  
-  .Anime img {
-    width: 100%; /* Make image fill the container width */
-    max-width: 500px; /* Set a maximum width for responsiveness */
-    object-fit: cover; /* Ensure image covers the space while maintaining aspect ratio */
-  }
-  
-  .Anime p { /* Style paragraphs */
-    margin: 0.5rem 0; /* Add some margin for spacing */
-  }
-  
-  .Anime a { /* Style links for streaming platforms */
-    color: #007bff; /* Set link color */
-    text-decoration: none; /* Remove underline */
-    margin-right: 1rem; /* Add some space between links */
-  }
-  
-  .Anime a:hover { /* Style link hover effect */
-    text-decoration: underline; /* Add underline on hover */
-  }
-  
-  .Anime iframe { /* Style the video iframe */
-    width: 100%; /* Make iframe fill the container width */
-    max-width: 800px; /* Set a maximum width for responsiveness */
-    aspect-ratio: 16/9; /* Maintain aspect ratio for video */
-    margin: 2rem 0; /* Add some margin for spacing */
-  }
-  
+/* Overall Anime Container */
+.anime-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+}
 
-  
+/* Image Container */
+.anime-image {
+  flex: 0 0 30%; /* Set width to 30% of the container */
+  margin: 10px;
+}
+
+.anime-image img {
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+  object-fit: cover;
+}
+
+/* Text Content Container */
+.anime-summary {
+  flex: 1; /* Take up remaining space */
+  padding: 10px;
+}
+
+/* Text Content Styles */
+.anime-summary h1,
+.anime-summary h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.anime-summary p {
+  margin: 0.5rem 0;
+  color: white; /* Text color */
+}
+
+/* Anchor Tags (Watch Links) */
+.anime-summary .watch-link {
+  color: red; /* Maintains red color */
+  text-decoration: none; /* Removes underline by default */
+  margin-right: 1rem;
+}
+
+.anime-summary .watch-link:hover {
+  text-decoration: underline; /* Underline appears on hover */
+}
+h3{
+  color: white;
+}
+/* Trailer Iframe */
+.anime-summary iframe {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  margin: 2rem 0;
+}
+.watch-link {
+  display: inline-block; /* Forces horizontal display */
+  /* Other styles like color, hover effects, etc. */
+}
+.small-cont{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.tile {
+  background: #4c688f;
+  margin: 0.25rem;
+  border-radius: 8px;
+  width: 15%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  align-items: center;
+
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

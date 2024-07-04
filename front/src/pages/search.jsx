@@ -3,9 +3,10 @@ import fetchData from '../components/data'
 import Tooltip from '@mui/material/Tooltip';
 import HCard from '../components/hcard'
 import Card from '../components/card'
-import {link, useLocation, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
+
 function Search(){
-    const location=useLocation()
+
     const {malid}=useParams();
     const [animeList, setAnimeList] = useState([]);
     useEffect(() => {

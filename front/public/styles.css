@@ -1,15 +1,21 @@
-body {
+html, body {
   font-family: Arial, sans-serif;
   background: #f3f4f6 url('./images/wallpaperflare.com_wallpaper.jpg') fixed center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
+  min-height: 100vh; /* Ensure full viewport height */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Enable flexbox layout for entire document */
+  flex-direction: column; /* Stack header and content vertically */
 }
 
+/* App Component (if needed) */
 .App {
-  text-align: center;
+  flex: 1; /* Allow App to fill remaining space after header */
+  display: flex; /* Maintain flexbox for potential internal layout */
+  justify-content: center; /* Center content within App (optional) */
+  align-items: center; /* Center content within App (optional) */
 }
+
 
 nav {
   display: flex;
@@ -34,6 +40,7 @@ nav a:hover {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 40%;
 }
 
 .login-title {
