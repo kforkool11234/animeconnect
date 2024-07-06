@@ -3,8 +3,6 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL||'http://localhost:5000';
 function Login() {
-  console.log('Axios Base URL:', axios.defaults.baseURL);
-  console.log('Base URL:', process.env.REACT_APP_BASE_URL);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
